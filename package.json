@@ -1,0 +1,16 @@
+{
+  "name": "laser-presenter",
+  "version": "3.0.0",
+  "description": "Dual-screen laser pointer highlighter",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

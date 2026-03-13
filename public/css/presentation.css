@@ -1,0 +1,25 @@
+/* presentation.css */
+#uploadScreen{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow-y:auto;}
+
+/* slide view */
+#slideScreen{display:none;position:fixed;inset:0;background:#000;flex-direction:column;}
+#slideArea{flex:1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#000;}
+
+#slideCanvas{display:block;max-width:100%;max-height:100%;image-rendering:crisp-edges;}
+#hlCanvas{position:absolute;pointer-events:none;}
+#laserDot{position:absolute;width:26px;height:26px;border-radius:50%;background:radial-gradient(circle,rgba(255,60,110,1) 0%,rgba(255,60,110,.35) 55%,transparent 75%);transform:translate(-50%,-50%);display:none;pointer-events:none;filter:drop-shadow(0 0 10px #ff3c6e);z-index:20;transition:left .05s,top .05s;}
+
+/* nav */
+.pres-nav{height:42px;background:rgba(18,18,26,.94);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:.6rem;padding:0 1rem;flex-shrink:0;z-index:30;backdrop-filter:blur(10px);transition:opacity .4s;}
+.pres-nav.hidden{opacity:0;pointer-events:none;}
+.nav-home{color:var(--dim);font-size:1.1rem;text-decoration:none;padding:0 4px;}
+.nav-home:hover{color:var(--accent2);}
+.nav-sep{width:1px;height:18px;background:var(--border);}
+.nav-btn{width:28px;height:28px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.8rem;transition:all .2s;}
+.nav-btn:hover{border-color:var(--accent2);color:var(--accent2);}
+.nav-btn:disabled{opacity:.3;cursor:default;}
+.slide-ctr{font-family:'Space Mono',monospace;font-size:.74rem;color:var(--dim);min-width:58px;text-align:center;}
+.conn-pill{display:flex;align-items:center;gap:5px;background:var(--surface2);border:1px solid var(--border);padding:3px 9px;border-radius:14px;font-family:'Space Mono',monospace;font-size:.64rem;white-space:nowrap;}
+.conn-dot{width:6px;height:6px;border-radius:50%;background:var(--dim);}
+.conn-dot.conn{background:#00ff88;}
+:fullscreen .pres-nav{display:none;}
